@@ -1,0 +1,155 @@
+.aboutCopany {
+    padding: $paddingContainer;
+    padding-top: 3em;
+    padding-bottom: 2.5em;
+    overflow: hidden;
+    position: relative;
+    @include max576{
+        padding: 3em 2em 3em 2em;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -11em;
+        left: 60%;
+        @include transform(translateX(-60%) rotate(45deg));
+        border: 20px solid $mainColor7;
+        width: 350px;
+        height: 350px;
+        z-index: -1;
+        @include max1024{
+            border: 15px solid #fdd28e;
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .container {
+        .aboutTxt {
+            float: left;
+            width: 40%;
+            @include min992 {
+                float: left;
+                width: 30%;
+            }
+            @include max992 {
+                float: none;
+                width: 100%;
+            }
+            h1 {
+                position: relative;
+                margin: 0;
+                padding-bottom: .5em;
+                font: $fontBold 3.5rem $mainFont;
+                color: $mainColor3;
+                text-transform: uppercase;
+                @include max1146 {
+                    font: $fontBold 2.5rem $mainFont;
+                }
+                span {
+                    color: $mainColor1;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 3.5em;
+                    height: .1em;
+                    bottom: 0;
+                    background-color: $mainColor1;
+                }
+            }
+            p {
+                font: $fontBold 1rem $mainFont;
+                color: $mainColor4;
+                padding: 2em 0 3em 0;
+                margin: 0;
+                @include max1146 {
+                    font: $fontBold 1rem $mainFont;
+                    padding: 1em 0 2em 0;
+                }
+                @include max1024 {
+                    font: $fontBold .9rem $mainFont;
+                }
+                @include max992 {
+                    font: $fontBold 1rem $mainFont;
+                    padding: 1em 3em 2em 0;
+                }
+                @include max576 {
+                    font: $fontBold 1rem $mainFont;
+                    padding: 1em 0em 2em 0;
+                }
+                span {
+                    font-weight: $fontRegular;
+                }
+            }
+        }
+    }
+    .aboutBoxImg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .aboutImg {
+            @include max992 {
+                display: none;
+            }
+            display: block;
+            float: right;
+            @include transform(rotate(45deg));
+            @include max1024{
+                @include transform(rotate(45deg) translate(16px, -95px));
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline;
+                    div {
+                        overflow: hidden;
+                        height: 320px;
+                        width: calc(320px - 1em);
+                        margin: 1em;
+                        @include max1024{
+                        height: 250px;
+                        width: calc(250px - 1em);
+                        margin: .5em;
+                        }
+                    }
+                    [class*="img-"] {
+                        display: inline-block;
+                    }
+                    .img-1 img {
+                        @include transform(rotate(-45deg) scale3d(.8, .75, .8) translate(-92px, -52px));
+                        @include max1146 {
+                            @include transform(rotate(-45deg) scale3d(.6, .6, .6) translate(-152px, -224px));
+                        }
+                    }
+                    .img-4 img {
+                        @include transform(rotate(-45deg) scale3d(.75, .75, .75) translate(-108px, -299px));
+                        @include max1146 {
+                            @include transform(rotate(-45deg) scale3d(0.6, 0.6, 0.6) translate(-135px, -428px));
+                        }
+                    }
+                    ul {
+                        li {
+                            display: inline-block;
+                            .img-2 img {
+                                @include transform(rotate(-45deg) scale3d(1, 1, 1) translate(-151px, -388px));
+                                @include max1146 {
+                                    @include transform(rotate(-45deg) scale3d(.6, .6, .6) translate(-220px, -656px));
+                                }
+                            }
+                            .img-3 img {
+                                @include transform(rotate(-45deg) scale3d(.7, .7, .7) translate(-82px, -486px));
+                                @include max1146 {
+                                    @include transform(rotate(-45deg) scale3d(0.55, 0.55, 0.55) translate(-144px, -676px));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

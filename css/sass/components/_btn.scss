@@ -1,0 +1,25 @@
+.btn{
+    text-decoration: none;
+    color: $mainColor2;
+    text-transform: uppercase;
+    background-color: $mainColor1;
+    padding: .6em 1.5em;
+    border-radius: 20px;
+    font-family: $mainFont;
+    font-weight: $fontBold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    &:focus {
+        outline: none;
+    }
+    &:hover,&:focus{
+        background-color: #ffcc41;
+        color: #373737;
+    }
+}
+a{
+    text-decoration: none;
+    &:focus {
+        outline: none;
+    }
+}

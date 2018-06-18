@@ -1,0 +1,78 @@
+// Media Qurey
+@mixin min1346 {
+    @media (min-width: 1346px) {
+        @content;
+    }
+}
+@mixin max1346 {
+    @media (max-width: 1346px) {
+        @content;
+    }
+}
+@mixin max1146 {
+    @media (max-width: 1146px) {
+        @content;
+    }
+}
+@mixin max1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin min992 {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin max992 {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+@mixin max768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin max576 {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+// Transitions & Transform & TransitionDelay
+@mixin transition($a) {
+    -o-transition: $a;
+    -moz-transition: $a;
+    -ms-transition: $a;
+    -webkit-transition: $a;
+    transition: $a;
+}
+@mixin TransitionDelay($a) {
+    -o-transition-delay: $a;
+    -moz-transition-delay: $a;
+    -ms-transition-delay: $a;
+    -webkit-transition-delay: $a;
+    transition-delay: $a;
+}
+@mixin transform($r) {
+    -o-transform: $r;
+    -moz-transform: $r;
+    -ms-transform: $r;
+    -webkit-transform: $r;
+    transform: $r;
+}
+// Align Items
+@mixin aItems($i) {
+    -webkit-box-align: $i;
+    -ms-flex-align: $i;
+    align-items: $i;
+}
+// Background Size
+@mixin backgroundSize($a) {
+    -o-background-size: $a;
+    -moz-background-size: $a;
+    -ms-background-size: $a;
+    -webkit-background-size: $a;
+    background-size: $a;
+}
